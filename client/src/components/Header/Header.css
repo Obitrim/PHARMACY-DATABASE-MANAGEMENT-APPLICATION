@@ -1,0 +1,51 @@
+.Header {
+	height: var(--header-h);
+	padding: 0 1rem;
+	box-shadow: var(--light-shadow);
+	background-color: var(--light);
+
+	display: flex;
+	align-items: center;
+}
+
+.Header a {
+	text-decoration: none;
+}
+
+.Header__Name {
+	color: var(--bg-dark);
+}
+
+.Header__MenuIcon {
+	margin-right: 0.3rem;
+	color: var(--bg-dark);
+}
+
+.Header__Phar {
+	color: var(--primary);
+}
+
+.Header__Notifications {
+	margin-left: auto;
+	color: var(--dark);
+
+	position: relative;
+}
+
+.Header__NotificationsBadge {
+	position: absolute;
+	right: -20%;
+	top: -20%;
+
+	display: inline-block;
+	background-color: var(--warning);
+	padding: 0.1rem 0.3rem;
+	border-radius: 50%;
+	font-size: calc(var(--font-size) - 4px);
+}
+
+@media (min-width: 992px) {
+	.Header__MenuIcon {
+		display: none;
+	}
+}
