@@ -2,19 +2,23 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import './RouterView.css';
-import DrugsView from '../../views/Drugs';
-import Dashboard from '../../views/Dashboard';
-import ReportsView from '../../views/Reports';
-import ReceiptsView from '../../views/Receipts';
-import AddStockView from '../../views/Stock/Add.js';
-import RemoveStockView from '../../views/Stock/Remove.js';
-import NearExpiryView from '../../views/Stock/NearExpiry.js';
-import ManufacturersView from '../../views/Stock/Manufacturers.js';
+// Customer views
+import HomeView from '../../views/Home';
+// Admin views
+import DrugsView from '../../views/AdminPages/Drugs';
+import Dashboard from '../../views/AdminPages/Dashboard';
+import ReportsView from '../../views/AdminPages/Reports';
+import ReceiptsView from '../../views/AdminPages/Receipts';
+import AddStockView from '../../views/AdminPages/Stock/Add.js';
+import RemoveStockView from '../../views/AdminPages/Stock/Remove.js';
+import NearExpiryView from '../../views/AdminPages/Stock/NearExpiry.js';
+import ManufacturersView from '../../views/AdminPages/Stock/Manufacturers.js';
 
 const Index = (props) => {
   return (
     <div className="RouterView">
     	<Switch>
+            <Route path="/" exact component={HomeView}/>
     		<Route path="/admin" exact component={Dashboard}/>
     		<Route path="/admin/drugs" component={DrugsView}/>
     		<Route path="/admin/reports" component={ReportsView}/>
