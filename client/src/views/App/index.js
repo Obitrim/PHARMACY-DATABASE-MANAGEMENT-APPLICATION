@@ -1,20 +1,18 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+
 import './App.css';
-import Header from '../../components/Header';
-import Navbar from '../../components/Navbar';
+import AdminPages from '../AdminPages';
 import RouterView from '../../components/RouterView';
 
 const Index = (props) => {
+	const location = useLocation();
+
+	if (location.pathname.startsWith("/admin")) {
+		return <AdminPages/>
+	}
 	// if user isn't logged in redirect to login
-  return (
-  	<div className="App">
-  		<Header/>
-	  	<main className="App__Main">
-	  		<Navbar/>
-	  		<RouterView/>
-	  	</main>
-  	</div>
-  )
+  return <RouterView/>
 }
 
 export default Index;
