@@ -1,0 +1,16 @@
+.Dash {
+	text-align: center;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.15);
+	padding: 1rem;
+}
+
+.Dash__Title {
+	color: var(--warning);
+	text-transform: uppercase;
+	font-size: var(--navlink-font-size);
+}
+
+.Dash__Value {
+	margin: 0.5rem 0 0 0;
+}
