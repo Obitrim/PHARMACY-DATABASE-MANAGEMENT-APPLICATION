@@ -29,6 +29,11 @@
 	font-size: var(--navlink-font-size);
 }
 
+.Navbar__Item:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
 .Active {
 	border-left-color: var(--primary);
 	background-color: rgba(255, 255, 255, 0.15);
