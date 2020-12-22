@@ -1,0 +1,20 @@
+.Dashboard__Heading {
+	text-transform: uppercase;
+	margin-top: 0;
+	font-size: calc(var(--font-size) * 2);
+}
+
+.Dashboard__Section {
+	margin-bottom: 3rem;
+}
+
+.Dashboard__Dashes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+	grid-gap: 1rem;
+}
+
+.Dashboard__RecentOrders {
+	width: 100%;
+	overflow-x: auto;
+}
