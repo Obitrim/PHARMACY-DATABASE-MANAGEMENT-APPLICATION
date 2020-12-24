@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Index = ({ headings, caption, children, stripped }) => {
   return (
-   <table className="BaseTable" border={!stripped && 0}>
+   <table className="BaseTable" border={stripped ? undefined : '0'}>
 		{caption && <caption className="BaseTable__Caption">{ caption }</caption>}
 		<thead className="BaseTable__Thead">
 			<tr>
