@@ -1,0 +1,69 @@
+.CustomSelect {
+	position: relative;
+}
+
+.CustomSelect__Toggler {
+	background-color: var(--primary);
+	color: var(--light);
+	padding: 0.3em 0.5em;
+	min-width: 8em;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.CustomSelect__Toggler:hover {
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.CustomSelect__Icon {
+	margin-left: 0.5em;
+}
+
+.CustomSelect__Options {
+	position: absolute;
+	top: calc(100% + 0.3em);
+	left: 0;
+
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	min-width: 100%;
+	background-color: var(--bg-light);
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(255, 255, 255, 0.15); 
+
+	opacity: 0;
+	pointer-events: none;
+	transition: var(--transition-speed);
+}
+
+.CustomSelect__Option {
+	padding: 0.3em 0.5em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.CustomSelect__Option:hover {
+	color: var(--light);
+	background-color: var(--primary);
+	cursor: pointer;
+}
+
+.CustomSelect__CheckIcon {
+	font-size: calc(var(--font-size) * 0.9) !important;
+	margin-left: 0.5rem;
+	color: var(--primary);
+}
+
+.CustomSelect__Option:hover .CustomSelect__CheckIcon {
+	color: var(--light);
+}
+
+.CustomSelect__Options__Show {
+	top: calc(100% + 0.5em);
+	opacity: 1;
+	pointer-events: initial;
+}
