@@ -13,6 +13,7 @@ html {
 	--success: #18A800;
 	--bg-dark: #0F1839;
 	--bg-light: #121D44;
+	--bg-glass: rgba(255, 255, 255, 0.15);
 
 	--transition-speed: 0.25s;
 	--light-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
