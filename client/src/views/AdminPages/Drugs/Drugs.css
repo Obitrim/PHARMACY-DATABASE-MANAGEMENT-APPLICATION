@@ -1,0 +1,48 @@
+/*Filter section*/
+.Drugs__Filterbox {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 2em;
+}
+
+.Drugs__Filterbox__Label {
+	margin-right: 0.5em;
+}
+
+.Drugs__Filterbox__PageLabel {
+	display: block;
+	margin-left: auto;
+	color: var(--warning);
+	font-size: calc(var(--font-size) * 0.7);
+}
+
+/*Table section*/
+.Drugs__TableSection {
+	overflow-x: auto;
+}
+
+.Drugs__TableSection td:last-child {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.Drugs__ActionIcon {
+	width: 30px;
+	height: 30px;
+	color: var(--danger);
+	border-radius: 50%;
+	transition: var(--transition-speed);
+
+	display: grid;
+	place-content: center;
+}
+
+.Drugs__ActionIcon:hover {
+	background-color: var(--bg-glass);
+}
+
+.Drugs__EditIcon {
+	color: var(--success);
+}
