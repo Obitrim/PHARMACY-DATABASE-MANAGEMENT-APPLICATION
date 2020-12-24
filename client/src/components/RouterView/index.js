@@ -6,6 +6,7 @@ import './RouterView.css';
 import HomeView from '../../views/Home';
 // Admin views
 import DrugsView from '../../views/AdminPages/Drugs';
+import OrdersView from '../../views/AdminPages/Orders';
 import Dashboard from '../../views/AdminPages/Dashboard';
 import ReportsView from '../../views/AdminPages/Reports';
 import ReceiptsView from '../../views/AdminPages/Receipts';
@@ -21,6 +22,7 @@ const Index = (props) => {
             <Route path="/" exact component={HomeView}/>
     		<Route path="/admin" exact component={Dashboard}/>
     		<Route path="/admin/drugs" component={DrugsView}/>
+            <Route path="/admin/orders" component={OrdersView}/>
     		<Route path="/admin/reports" component={ReportsView}/>
     		<Route path="/admin/receipts" component={ReceiptsView}/>
     		<Route path="/admin/stock/add" component={AddStockView}/>
