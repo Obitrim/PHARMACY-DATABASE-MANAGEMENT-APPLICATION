@@ -8,7 +8,7 @@ import BaseTable from '../../../components/BaseTable';
 const Index = (props) => {
   return (
     <>
-    	<h1 className="Dashboard__Heading">Dashboard</h1>
+    	<h1 className="View__Heading">Dashboard</h1>
     	<section className="Dashboard__Section Dashboard__Dashes">
     		<Dash title="Total Sales" value="$4,500"/>
     		<Dash title="Total Reports" value="30"/>
@@ -52,7 +52,7 @@ const Index = (props) => {
               <td>I feel notious whenever i take this drug</td>
               <td>24/12/2020</td>
           </tr>
-            </BaseTable>
+        </BaseTable>
     	</section>
     </>
   )
