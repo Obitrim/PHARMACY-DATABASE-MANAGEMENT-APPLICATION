@@ -60,4 +60,8 @@
 	.Navbar {
 		position: static;
 	}
+
+	#Cancel__Icon {
+		display: none;
+	}
 }
