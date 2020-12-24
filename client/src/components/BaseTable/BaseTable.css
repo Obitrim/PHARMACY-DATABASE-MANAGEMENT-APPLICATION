@@ -1,23 +1,36 @@
 .BaseTable {
 	width: 100%;
-	margin-top: 1rem;
-	text-align: center;
+	margin-top: 1em;
 }
 
 .BaseTable tr {
-	background-color: rgba(255, 255, 255, 0.15);
+	background-color: var(--bg-glass);
+	transition: var(--transition-speed);
+}
+
+.BaseTable tbody {
+	font-size: calc(var(--font-size) * 0.9);
+}
+
+.BaseTable tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.03);
 }
 
 .BaseTable td,
 .BaseTable th {
-	padding: 0.5rem;
+	padding: 0.5em;
 }
 
 .BaseTable th {
 	color: var(--warning);
-	padding: 0.8rem 0.5rem;
+	padding: 0.8em 0.5em;
+	text-transform: uppercase;
+	font-size: calc(var(--font-size) * 0.8);
+	font-weight: 500;
 }
 
-.Stripped {
-	border-top: 1px solid red;
+@media (min-width: 920px) {
+	.BaseTable {
+		text-align: center;
+	}
 }
