@@ -4,6 +4,7 @@
 
 html {
 	--header-h: 57px;
+	--b-radius: 10px;
 
 	--light: white;
 	--primary: #0B85F5;
