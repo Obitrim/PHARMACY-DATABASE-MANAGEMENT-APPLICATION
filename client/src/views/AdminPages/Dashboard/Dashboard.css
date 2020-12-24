@@ -14,7 +14,33 @@
 	grid-gap: 1rem;
 }
 
+.Dashboard__SalesGraph {
+	min-height: 50vh;
+	border-radius: var(--b-radius);
+	background-color: rgba(255, 255, 255, 0.15); 
+}
+
 .Dashboard__RecentOrders {
 	width: 100%;
 	overflow-x: auto;
+}
+
+.Section__Heading {
+	text-transform: uppercase;
+	font-size: calc(var(--font-size) * 1.2);
+
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.5rem;
+}
+
+.Dashboard__SeeAll {
+	font-size: var(--font-size);
+	color: var(--warning);
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.Dashboard__SeeAll:hover {
+	text-decoration: underline;
 }
