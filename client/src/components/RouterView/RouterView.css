@@ -1,5 +1,12 @@
 .RouterView {
 	flex: 1;
-	padding: 1rem 1.5rem;
+	padding: 1rem;
+	overflow: hidden;
 	overflow-y: auto;
+}
+
+@media (min-width: 920px) {
+	.RouterView {
+		padding: 2.5rem;
+	}
 }
