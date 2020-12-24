@@ -34,6 +34,7 @@ const Index = (props) => {
       </a>
     	<NavLink to="/admin" className="Navbar__Item" activeClassName="Active" exact>Dashboard</NavLink>
     	<NavLink to="/admin/drugs" className="Navbar__Item" activeClassName="Active">Drugs</NavLink>
+      <NavLink to="/admin/orders" className="Navbar__Item" activeClassName="Active">Orders</NavLink>
     	<CollapsibleCard title="Stocks">
     		<NavLink to="/admin/stock/add" className="Navbar__Item" activeClassName="Active">
     			<AddIcon className="Navbar__Icon"/>
