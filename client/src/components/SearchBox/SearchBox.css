@@ -1,0 +1,22 @@
+.SearchBox {
+	display: flex;
+	align-items: center;
+}
+
+.SearchBox__Input {
+	background-color: var(--bg-glass);
+	color: var(--light);
+	font-size: var(--font-size);
+	
+	border: none;
+	padding: 0.5rem 1rem;
+	margin-left: 1rem;
+
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.SearchBox__Input:focus {
+	border: 1px solid var(--primary);
+	outline: none;
+}
