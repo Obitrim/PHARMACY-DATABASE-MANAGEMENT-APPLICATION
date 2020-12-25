@@ -3,7 +3,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	margin-top: 2em;
+	margin: 2em 0 1rem;
 }
 
 .Drugs__Filterbox__Label {
@@ -45,4 +45,26 @@
 
 .Drugs__EditIcon {
 	color: var(--success);
+}
+
+/*Pagination Btns*/
+.Drugs__PaginationBtns {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	
+	margin-top: 1em;
+}
+
+.Drugs__PaginationBtn {
+	/*display: flex;*/
+	/*justify-content: center;*/
+
+	border: 1px solid var(--warning);
+	color: var(--warning);
+	transition: var(--transition-speed);
+}
+
+.Drugs__PaginationBtn + .Drugs__PaginationBtn {
+	margin-left: 0.5em;
 }
