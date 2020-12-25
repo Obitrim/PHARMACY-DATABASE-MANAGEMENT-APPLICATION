@@ -1,6 +1,8 @@
 import React from 'react';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 import './Drugs.css';
 import SearchBox from '../../../components/SearchBox';
@@ -210,7 +212,15 @@ const Index = (props) => {
           </tr>
         </BaseTable>
     	</section>
-        {/*Pagination button*/}
+      {/*Pagination button*/}
+      <div className="Drugs__PaginationBtns">
+      	<a href="#" className="Drugs__PaginationBtn">
+      		<ChevronLeftIcon/>
+      	</a>
+      	<a href="#" className="Drugs__PaginationBtn Drugs__PaginationBtn--Next">
+      		<ChevronRightIcon/>
+      	</a>
+      </div>
     </>
   )
 }
