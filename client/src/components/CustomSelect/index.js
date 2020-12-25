@@ -5,7 +5,7 @@ import CheckIcon from '@material-ui/icons/Check';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
-const Index = ({ options }) => {
+const Index = ({ options, onSelect }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selectedValue, setSelectedValue] = useState("Select Option");
 
@@ -21,6 +21,7 @@ const Index = ({ options }) => {
 	function selectOption(evt) {
 		let value = evt.target.dataset.value;
 		setSelectedValue(value);
+		onSelect(selectedValue);
 	}
 
 	useEffect(() => {
@@ -53,7 +54,14 @@ const Index = ({ options }) => {
 }
 
 Index.propTypes = {
-	options: PropTypes.arrayOf(PropTypes.string).isRequired
+	options: PropTypes.arrayOf(PropTypes.string).isRequired,
+	onSelect: PropTypes.func
+}
+
+Index.defaultProps = {
+	onSelect: function(selectedVal) {
+		alert('Supply CustomSelect component with onSelect attribute of value function to get access the selected  value as a parameter');
+	}
 }
 
 export default Index;
