@@ -1,0 +1,97 @@
+.CreateDrug__Info__Para {
+	margin: 0 !important;
+	font-size: var(--font-size);
+	line-height: 150%;
+}
+
+/* Create Drug Form */
+.CreateDrug__Form {
+	margin-top: 2em;
+}
+
+.CreateDrug__Label {
+	color: var(--warning);
+}
+
+.CreateDrug__Input {
+	display: block;
+	width: 100%;
+	border: none;
+	padding: 0.5em 1em;
+	margin: 0.5em 0;
+
+	background-color: var(--bg-glass);
+	font-size: var(--font-size);
+	color: var(--light);
+}
+
+.CreateDrug__Form .CustomSelect {
+	margin: 0.5em 0 !important;
+}
+
+.CreateDrug__Form .CustomSelect__Options {
+	max-height: 50vh;
+	overflow-y: auto;
+}
+
+/*button bar*/
+.CreateDrug .FormGroup--BtnBar {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.CreateDrug__DrugListLink {
+	text-decoration: none;
+	color: var(--primary);
+}
+
+.CreateDrug__DrugListLink:hover {
+	text-decoration: underline;
+}
+
+.CreateDrug__SubmitBtn {
+	-webkit-appearance: none;
+	appearance: none;
+
+	border: 1px solid var(--primary);
+	background-color: var(--primary);
+	color: var(--light);
+	margin-left: 1.5em;
+	padding: 0.7em 1em;
+
+	transition: var(--transition-speed);
+}
+
+.CreateDrug__SubmitBtn:hover {
+	cursor: pointer;
+	background-color: var(--transparent);
+	color: var(--primary);
+}
+
+.CreateDrug__DrugListLink,
+.CreateDrug__SubmitBtn {
+	text-transform: uppercase;
+	font-size: calc(var(--font-size) - 2px) !important;
+	font-weight: 500;
+}
+
+@media (min-width: 768px) {
+	.CreateDrug {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.CreateDrug > * {
+		width: 45%;
+	}
+
+	.CreateDrug__Form .FormGroup--Row {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	.CreateDrug__Form .FormGroup--Row > * {
+		width: 47%;
+	}
+}
