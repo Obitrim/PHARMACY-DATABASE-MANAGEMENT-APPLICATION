@@ -39,8 +39,18 @@
 	transition: var(--transition-speed);
 }
 
+.CustomSelect__Options::-webkit-scrollbar {
+	width: 5px;
+}
+.CustomSelect__Options::-webkit-scrollbar-thumb {
+	background-color: var(--bg-glass);
+	border-radius: 1em;
+}
+
 .CustomSelect__Option {
 	padding: 0.3em 0.5em;
+	text-transform: capitalize;
+	
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
