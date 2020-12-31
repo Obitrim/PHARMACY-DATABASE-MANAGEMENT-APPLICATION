@@ -1,0 +1,21 @@
+.FilterBtn {
+	all: initial;
+	padding: 0.5em 1em;
+	background-color: var(--bg-glass);
+	color: var(--warning);
+	font-family: roboto, sans-serif;
+}
+
+.FilterBtn:hover {
+	cursor: pointer;
+	box-shadow: var(--light-shadow);
+}
+
+.FilterBtn--Active {
+	color: var(--bg-dark);
+	background-color: var(--warning);
+}
+
+.FilterBtn + .FilterBtn {
+	margin-left: 0.5em;
+}

@@ -1,0 +1,11 @@
+.Manufacturers__Row {
+	margin-top: 3em;
+
+	display: grid;
+	grid-gap: 1.5em;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.View__Heading--Manufacturer {
+	margin-bottom: 1em !important;
+}

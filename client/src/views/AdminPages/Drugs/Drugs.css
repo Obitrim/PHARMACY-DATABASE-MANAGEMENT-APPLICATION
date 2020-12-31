@@ -22,6 +22,15 @@
 	overflow-x: auto;
 }
 
+.Drugs__TableSection::-webkit-scrollbar {
+	height: 5px;
+}
+
+.Drugs__TableSection::-webkit-scrollbar-thumb {
+	border-radius: 100px;
+	background-color: var(--bg-glass);
+}
+
 .Drugs__TableSection td:last-child {
 	display: flex;
 	align-items: center;

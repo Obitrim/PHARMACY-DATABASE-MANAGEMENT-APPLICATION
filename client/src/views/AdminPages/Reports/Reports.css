@@ -1,0 +1,39 @@
+.Reports__FilterBox {
+	margin: 2em 0;
+}
+
+.Reports__FilterBox__Col {
+	display: inline-grid;
+	grid-template-columns: 50px 1fr;
+	align-items: center;
+}
+
+.Reports__FilterBox__Col + .Reports__FilterBox__Col {
+	margin-top: 1em;
+}
+
+.Reports__DateInput {
+	all: initial;
+	background-color: var(--bg-glass);
+	padding: 0.5em 1em;
+	font-size: var(--font-size);
+	border: 1px solid transparent;
+	margin-left: 0.8em;
+}
+
+.Reports__DateInput:focus {
+	border-color: var(--primary);
+}
+
+
+@media (min-width: 768px) {
+	.Reports__FilterBox {
+		display: flex;
+		align-items: center;
+	}
+
+	.Reports__FilterBox__Col + .Reports__FilterBox__Col {
+		margin-left: 2em;
+		margin-top: 0;
+	}
+}

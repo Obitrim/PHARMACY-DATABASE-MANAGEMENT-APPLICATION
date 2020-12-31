@@ -1,0 +1,6 @@
+.Receipts .Drugs__ActionIcon {
+	display: flex;
+	align-items: center;
+
+	text-decoration: none;
+}
