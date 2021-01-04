@@ -7,7 +7,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 const Index = ({ options, onSelect }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [selectedValue, setSelectedValue] = useState("Select Option");
+	const [selectedValue, setSelectedValue] = useState(options[0]);
 
 	function toggleOptions(evt) {
 		evt.stopPropagation();
@@ -18,16 +18,19 @@ const Index = ({ options, onSelect }) => {
 		setIsOpen(false);
 	}
 
-	function selectOption(evt) {
-		let value = evt.target.dataset.value;
-		setSelectedValue(value);
-		onSelect(selectedValue);
+	function selectOption(option) {
+		return () => {
+			setSelectedValue(option);
+			onSelect(option);
+		}
 	}
 
 	useEffect(() => {
 		document.documentElement.addEventListener('click', onClickOutsideHandler);
 		return () => document.documentElement.removeEventListener('click', onClickOutsideHandler);
 	}, []);
+
+
 
   return (
     <div className="CustomSelect">
@@ -42,8 +45,7 @@ const Index = ({ options, onSelect }) => {
     				<li 
     					className="CustomSelect__Option" 
     					key={index} 
-    					data-value={option} 
-    					onClick={selectOption}>
+    					onClick={selectOption(option)}>
     					{option}
     					{option === selectedValue && <CheckIcon className="CustomSelect__CheckIcon"/>}
     				</li>
