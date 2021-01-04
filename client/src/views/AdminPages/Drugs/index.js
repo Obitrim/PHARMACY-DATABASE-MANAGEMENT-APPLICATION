@@ -1,18 +1,41 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 import './Drugs.css';
+import { StoreContext } from '../../../store';
 import SearchBox from '../../../components/SearchBox';
 import BaseTable from '../../../components/BaseTable';
 import CustomSelect from '../../../components/CustomSelect';
 
 const Index = (props) => {
-	function searchHandler(){
+  const { store } = useContext(StoreContext);
+  const [filter, setFilter] = useState('all');
+
+	function searchHandler() {
 		console.log('Searching');
 	}
+
+  function getFilteredDrugs() {
+    let drugs = [...store.drugs];
+    if (filter.toLowerCase() === 'finished') {
+      drugs = store.drugs.filter(drug => drug.quantity === 0);
+
+    } /*else if (filter.toLowerCase() === 'expired') {
+
+      let todayInMilliSeconds = new Date().valueOf();
+      drugs = store.drugs.filter(drug => {
+        let expirationDateInMilliSeconds = new Date(drug.expirationDate).valueOf();
+        return todayInMilliSeconds > expirationDateInMilliSeconds;
+      });
+    }*/
+
+    return drugs;
+  }
+
+  let filteredDrugs = getFilteredDrugs();
 
   return (
     <>
@@ -24,7 +47,10 @@ const Index = (props) => {
     	{/*Filter box*/}
     	<div className="Drugs__Filterbox">
     		<span className="Drugs__Filterbox__Label">Filter</span>
-    		<CustomSelect options={['All', 'Expired', 'Finished']}/>
+    		<CustomSelect 
+          options={['All', 'Expired', 'Finished']}
+          onSelect={selectedValue =>  setFilter(selectedValue)}
+        />
     		<span className="Drugs__Filterbox__PageLabel">1 of 10 pages</span>
     	</div>
     	{/*Table*/}
@@ -34,182 +60,24 @@ const Index = (props) => {
           	'Product Name', 'FDA number', 'Manufacturer', 'Administration method', 'Stock Quantity', 'Expiration Date', 'Action'
           	]}
           >
-          <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
-           <tr>
-              <td>Paracetamol</td>
-              <td>12342342879</td>
-              <td>Lucky Herbal</td>
-              <td>Oral</td>
-              <td>300</td>
-              <td>24/12/2020</td>
-              <td>
-              	<a href="#" className="Drugs__ActionIcon">
-              		<DeleteIcon/>
-              	</a>
-              	<a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
-              		<EditIcon/>
-              	</a>
-              </td>
-          </tr>
+          {filteredDrugs.map((drug, index) => (
+            <tr key={index}>
+                <td>{drug.name}</td>
+                <td>{drug.FDANumber}</td>
+                <td>{drug.manufacturer}</td>
+                <td>{drug.adminMethod}</td>
+                <td>{drug.quantity}</td>
+                <td>{drug.expirationDate}</td>
+                <td>
+                  <a href="#" className="Drugs__ActionIcon">
+                    <DeleteIcon/>
+                  </a>
+                  <a href="#" className="Drugs__ActionIcon Drugs__EditIcon">
+                    <EditIcon/>
+                  </a>
+                </td>
+            </tr>
+            ))}
         </BaseTable>
     	</section>
       {/*Pagination button*/}
