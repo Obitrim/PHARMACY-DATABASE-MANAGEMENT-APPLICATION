@@ -5,7 +5,6 @@ const reducer =  (state, action) => {
 				...state,
 				navOpen: action.show
 			}
-			break;
 
 		default: return { ...state }
 	}
