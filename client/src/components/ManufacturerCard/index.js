@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './ManufacturerCard.css';
 
-const Index = ({ name, contact, drug, email}) => {
+const Index = ({ name, phone, drug, email}) => {
   return (
     <div className="ManufacturerCard">
     	<div>
@@ -11,8 +11,8 @@ const Index = ({ name, contact, drug, email}) => {
     		<p className="Manufacturer__Value">{name}</p>
     	</div>
     	<div>
-    		<h2 className="Manufacturer__Label TWarning">Contact</h2>
-    		<p className="Manufacturer__Value">{contact}</p>
+    		<h2 className="Manufacturer__Label TWarning">Phone</h2>
+    		<p className="Manufacturer__Value">{phone}</p>
     	</div>
     	<div>
     		<h2 className="Manufacturer__Label TWarning">Drug Name</h2>
@@ -28,14 +28,14 @@ const Index = ({ name, contact, drug, email}) => {
 
 Index.propTypes = {
 	name: PropTypes.string,
-	contact: PropTypes.string,
+	phone: PropTypes.string,
 	drug: PropTypes.string,
 	email: PropTypes.string,
 };
 
 Index.defaultProps = {
 	name: 'Manufacturer\'s name',
-	contact: 'Contact',
+	phone: 'phone',
 	drug: 'Name of drug',
 	email: 'domain@gmail.com'
 };
