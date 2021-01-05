@@ -5,6 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import './Add.css';
 import CustomSelect from '../../../components/CustomSelect';
+import pillImg from './imgs/pill-1x.svg';
 
 const Add = (props) => {
 	// const [expirationDate, setExpirationDate] = useState("");
@@ -31,6 +32,7 @@ const Add = (props) => {
 					Keeping records of drugs helps the system to easily track drugs in your possession. 
 					<span className="TWarning">&nbsp;Please provide all details</span>
 				</p>
+				<img src={pillImg} className="CreateDrug__PillImg" alt="pill"/>
 			</div>
 			<Formik
 				initialValues={{
@@ -97,7 +99,7 @@ const Add = (props) => {
 							/>
 						</div>
 						<div className="FormGroup">
-							<label>Administration Method</label>
+							<label className="CreateDrug__Label">Administration Method</label>
 							<CustomSelect onSelect={onSelect} options={administrationOptions}/>
 						</div>
 						<div className="FormGroup FormGroup--Row">
@@ -128,7 +130,7 @@ const Add = (props) => {
 							</div>
 						</div>
 						<div className="FormGroup FormGroup--BtnBar">
-							<Link to="/admin/drgus" className="CreateDrug__DrugListLink">Drug List</Link>
+							<Link to="/admin/drugs" className="CreateDrug__DrugListLink">Drug List</Link>
 							<button className="CreateDrug__SubmitBtn">Create Record</button>
 						</div>
 					</Form>
