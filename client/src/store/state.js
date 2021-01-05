@@ -55,8 +55,46 @@ const state = {
 			adminMethod: 'Oral',
 			quantity: 300,
 			expirationDate: '24/12/2020'
+		}	
+	],
+
+	manufacturers: [
+		{
+			name: 'Lucky Herbal',
+			phone: '0240000000',
+			drug: 'Lucky Herbal capsules',
+			email: 'domain@gmail.com'
 		},
-		
+		{
+			name: 'Perfect Skin',
+			phone: '0240000000',
+			drug: 'Perfect skin and body lotion',
+			email: 'domain@gmail.com'
+		},
+		{
+			name: 'Lucky Herbal',
+			phone: '0240000000',
+			drug: 'Lucky Herbal capsules',
+			email: 'domain@gmail.com'
+		},
+		{
+			name: 'Perfect Skin',
+			phone: '0240000000',
+			drug: 'Perfect skin and body lotion',
+			email: 'domain@gmail.com'
+		},
+		{
+			name: 'Perfect Skin',
+			phone: '0240000000',
+			drug: 'Perfect skin and body lotion',
+			email: 'domain@gmail.com'
+		},
+		{
+			name: 'Lucky Herbal',
+			phone: '0240000000',
+			drug: 'Lucky Herbal capsules',
+			email: 'domain@gmail.com'
+		}
 	]
 };
 
