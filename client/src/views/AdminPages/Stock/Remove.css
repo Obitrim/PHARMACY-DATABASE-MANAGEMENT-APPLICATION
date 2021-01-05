@@ -1,6 +1,7 @@
 .RemoveDrug__Filterbox {
 	display: flex;
 	align-items: center;
+	margin: 2em 0;
 }
 
 .RemoveDrug__Filterbox .SearchBox {
