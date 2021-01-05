@@ -13,7 +13,7 @@ const state = {
 		},
 		{
 			id: '2',
-			name: 'Paracetamol',
+			name: 'Efpack',
 			FDANumber: '12342342879',
 			manufacturer: 'Lucky Herbal',
 			adminMethod: 'Oral',
@@ -31,7 +31,7 @@ const state = {
 		},
 		{
 			id: '4',
-			name: 'Paracetamol',
+			name: 'Chloroquin',
 			FDANumber: '12342342879',
 			manufacturer: 'Lucky Herbal',
 			adminMethod: 'Oral',
@@ -40,7 +40,7 @@ const state = {
 		},
 		{
 			id: '5',
-			name: 'Paracetamol',
+			name: 'Dichlophynol',
 			FDANumber: '12342342879',
 			manufacturer: 'Lucky Herbal',
 			adminMethod: 'Oral',
