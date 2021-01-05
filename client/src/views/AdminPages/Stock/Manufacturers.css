@@ -9,3 +9,43 @@
 .View__Heading--Manufacturer {
 	margin-bottom: 1em !important;
 }
+
+.Manufacturers__CreateNewBtn {
+	all: initial;
+	font-family: inherit;
+	color: var(--light);
+
+	border: 1px solid var(--warning);
+	background: var(--warning);
+	padding: 1em;
+	box-shadow: var(--light-shadow);
+	border-radius: 10000px;
+	width: 25px;
+	white-space: nowrap;
+	overflow: hidden;
+
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+
+	position: fixed;
+	right: 3.5em;
+	bottom: 2em;
+
+	transition: all var(--transition-speed);
+}
+
+.Manufacturers__CreateNewBtn:hover {
+	cursor: pointer;
+	width: 120px;
+}
+
+.Manufacturers__CreateNewBtn__Text {
+	opacity: 0;
+	padding-left: 0.5em;
+	transition: all var(--transition-speed);
+}
+
+.Manufacturers__CreateNewBtn:hover .Manufacturers__CreateNewBtn__Text {
+	opacity: 1;
+}
